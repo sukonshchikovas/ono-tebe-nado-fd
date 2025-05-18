@@ -9,7 +9,7 @@
     grid-template-columns: 1fr min-content 1fr;
     align-items: center;
     margin: 0;
-    padding: 92px 50px;
+    padding: 92px 50px 96px;
     color: #000;
     font-size: 18px;
 }
@@ -32,6 +32,7 @@
 .header__logo {
     display: block;
     width: 148px;
+    height: 105px;
 }
 
 .address {
@@ -59,8 +60,11 @@
 
 .overlay {
     position: absolute;
-    top: 0; right: 0; bottom: 0; left: 0;
-    background: rgba(0, 0, 0, 0.5); 
+    top: 0; 
+    right: 0; 
+    bottom: 0; 
+    left: 0;
+    background: rgba(0, 0, 0, 0.6); 
     z-index: -1;
 }
 
@@ -72,7 +76,7 @@
 }
 
 .letter-spacing-extended {
-    letter-spacing: 25px;
+    letter-spacing: 30px;
 }
 
 .no-letter-spacing {
@@ -83,10 +87,16 @@
 .aligned-text_center,
 .aligned-text_right {
     display: block;
+    height: 115px;
+}
+
+.aligned-text {
+    margin-bottom: 20px;
 }
 
 .aligned-text_center {
     text-align: center;
+    margin-bottom: 20px;
 }
 
 .aligned-text_right {
@@ -103,7 +113,7 @@
 .cover__description-text {
     font-weight: 400;
     font-size: 22px;
-    word-spacing: 15px;
+    word-spacing: 20px;
     line-height: 28px;
 }
 
@@ -224,7 +234,7 @@
 }
 
 .about__column {
-    margin-top: 136px;
+    padding-top: 136px;
 }
 
 .about__title {
@@ -251,11 +261,17 @@
     grid-template-columns: repeat(3, 1fr);
     height: 180px;
     padding: 0 50px;
+    font-size: 18px;
+    line-height: 1.5;
 }
 
 .footer__menu-list {
     list-style: none;
     text-align: center;
+}
+
+.footer__menu-list-item {
+    height: 22px;
 }
 
 .footer__menu-link_active .footer__menu-link {
