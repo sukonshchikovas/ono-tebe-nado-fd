@@ -16,7 +16,10 @@
 .header__links-list {
   display: flex;
   flex-direction: row;
-  gap: 25px;
+
+  /* Исправлен отступ между элементами */
+
+  gap: 31px;
   list-style: circle;
 }
 
@@ -24,13 +27,20 @@
   list-style-type: none;
 }
 
-.header__link_active .header__link {
+.header__link {
   text-decoration: none;
+  border-bottom: 2px solid;
 }
+
+.header__link_active.header__link {
+  border-bottom: none;
+}
+
+/* изменены размеры логотипа */
 
 .header__logo {
   display: block;
-  width: 148px;
+  width: 135px;
   height: 105px;
 }
 
@@ -42,6 +52,11 @@
 .header__address {
   max-width: 240px;
   justify-self: end;
+}
+
+.address__link {
+  text-decoration: none;
+  border-bottom: 2px solid;
 }
 
 .cover {
@@ -72,6 +87,8 @@
   font-weight: 700;
   font-size: 100px;
   margin-bottom: 106px;
+  letter-spacing: 0.3em;
+  line-height: 115%;
 }
 
 .letter-spacing-extended {
@@ -82,23 +99,16 @@
   letter-spacing: normal;
 }
 
-.aligned-text,
-.aligned-text_center,
-.aligned-text_right {
-  display: block;
-  height: 115px;
-}
-
 .aligned-text {
+  display: block;
   margin-bottom: 20px;
 }
 
-.aligned-text_center {
+.aligned-text.aligned-text_center {
   text-align: center;
-  margin-bottom: 20px;
 }
 
-.aligned-text_right {
+.aligned-text.aligned-text_right {
   text-align: right;
 }
 
@@ -157,11 +167,17 @@
   flex-direction: column;
   justify-content: space-between;
   padding: 48px 40px;
-}
-
-.card-link,
-.card {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  z-index: 0;
   height: 100%;
+  line-height: 120%;
+} 
+
+.card-link {
+  height: 100%;
+  text-decoration: none;
 }
 
 .card__title {
@@ -188,15 +204,6 @@
 
 .card_type_picture {
   background-image: url(../images/card-lot-03.jpg);
-}
-
-.card_type_film,
-.card_type_book,
-.card_type_picture {
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  z-index: 0;
 }
 
 .lots__look-more-link {
@@ -255,10 +262,10 @@
 .footer {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  height: 180px;
   padding: 0 50px;
   font-size: 18px;
   line-height: 1.5;
+  padding-bottom: 82px;
 }
 
 .footer__menu-list {
@@ -266,11 +273,7 @@
   text-align: center;
 }
 
-.footer__menu-list-item {
-  height: 22px;
-}
-
-.footer__menu-link_active .footer__menu-link {
+.footer__menu-link_active.footer__menu-link {
   text-decoration: none;
 }
 
