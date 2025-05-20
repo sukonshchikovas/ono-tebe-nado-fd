@@ -29,7 +29,7 @@
 
 .header__link {
   text-decoration: none;
-  border-bottom: 2px solid;
+  border-bottom: 1px solid;
 }
 
 .header__link_active.header__link {
@@ -56,7 +56,7 @@
 
 .address__link {
   text-decoration: none;
-  border-bottom: 2px solid;
+  border-bottom: 1px solid;
 }
 
 .cover {
@@ -264,7 +264,6 @@
   grid-template-columns: repeat(3, 1fr);
   padding: 0 50px;
   font-size: 18px;
-  line-height: 1.5;
   padding-bottom: 82px;
 }
 
@@ -273,8 +272,13 @@
   text-align: center;
 }
 
-.footer__menu-link_active.footer__menu-link {
+.footer__menu-link {
   text-decoration: none;
+  border-bottom: 1px solid;
+}
+
+.footer__menu-link_active.footer__menu-link {
+  border-bottom: none;
 }
 
 .footer__social-list {
